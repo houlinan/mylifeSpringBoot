@@ -14,6 +14,7 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.math.BigDecimal;
 
 /**
@@ -28,6 +29,7 @@ public class BillController {
 
     @Autowired
     BillService  billService ;
+
 
     @Autowired
     UserService  userService ;
@@ -83,6 +85,11 @@ public class BillController {
 
     }
 
+
+    public static void main(String[] args) {
+        String str = "/storage/WCMData2//webpic\\W0201905\\W020190522\\W020190522611637779618.png";
+        System.out.println(str.substring(str.lastIndexOf(File.separator)+1 , str.length()));
+    }
 
 
 
